@@ -53,9 +53,10 @@ solve minimize total_drop;
 
 output [ "t=\(t)\n"
        ++ "  demand=\(sum(z in ZONE)(demand[z,t]))\n"
+       ++ "  capacity=\(sum(l in LAB)(capacity[l,t]))\n"
        ++ "  drop=\(sum(z in ZONE)(dropped[z,t]))\n"
-       ++ "  sent=" ++ concat([ "(\(z)->\(l),\(sent[z,l,t])) " | z in ZONE, l in LAB ]) ++ "\n"
-       ++ "  load=" ++ concat([ "(\(l),\(load[l,t]))" | l in LAB]) ++ "\n"
+    %   ++ "  sent=" ++ concat([ "(\(z)->\(l),\(sent[z,l,t])) " | z in ZONE, l in LAB ]) ++ "\n"
+    %   ++ "  load=" ++ concat([ "(\(l),\(load[l,t]))" | l in LAB]) ++ "\n"
        ++ "\n"
        | t in TIME
        ] ++
