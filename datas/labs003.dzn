@@ -1,0 +1,23 @@
+% showing basics of attribution when there is delay
+
+nLab = 3;
+nZone = 2;
+nTime = 5;
+sample_lifetime = 1;
+
+capacity =
+  [|1,1,1,1,1  % lab1 -> [t1,...
+   |1,1,1,1,1
+   |1,1,1,1,1
+   |];
+  
+transit =
+  [|0,0,0   % zone1 -> lab1,lab2...
+   |0,0,1   % zone2 -> ...
+   |];
+   
+demand =
+  [|3,0,0,0,0     % zone1 -> [t1,t2,...
+   |0,0,0,0,0     % zone2 -> ...
+   |];
+  

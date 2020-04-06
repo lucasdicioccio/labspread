@@ -1,0 +1,23 @@
+% showing basics of attribution when there is enough capacity
+
+nLab = 3;
+nZone = 2;
+nTime = 5;
+sample_lifetime = 0;
+
+capacity =
+  [|1,1,1,1,1
+   |1,1,1,1,1
+   |1,1,1,1,1
+   |];
+  
+transit =
+  [|0,0,0
+   |0,0,0
+   |];
+   
+demand =
+  [|1,1,2,0,10
+   |1,0,0,2,0
+   |];
+  
